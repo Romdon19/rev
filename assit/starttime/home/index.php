@@ -1,0 +1,42 @@
+<?php
+include('../naviii/index.php');
+?>
+<div class="row" style="padding: 12px 6px 0px 6px;">
+<div class="col-md-4"></div>
+<div class="col-md-4">
+<table id="example" class="table table-striped table-bordered" style="width:100%">
+
+<thead>
+<h5 style="text-align: center;">เวลาเริ่มต้น</h5>
+<tr>
+<td align="center">ลำดับ</td>
+<td align="center">ID</td>
+<td align="center">เวลา</td>
+</tr>
+</thead>
+<tbody>
+<?php
+if (count($resultstarttime)> 0)
+{
+$i = 1;
+foreach ($resultstarttime as $row){
+?>
+<tr>
+<td align="center"><?php echo $i; ?></td>
+<td align="center"><?php echo $row['sid']; ?></td>
+<td align="center"><?php echo $row['stime'];?></td>
+</tr>
+<?php $i++; } ?>
+</tbody>
+<?php } ?>
+</table>
+</div>
+<div class="col-md-4"></div>
+</div>
+
+	<p style="text-align: center;display: block;margin: auto;padding: 0px 36px 36px 36px;">
+	<a href="../../" class="btn btn-primary"><img src="../../../images/mainmenu.png" width="24"> กลับหน้าหลัก</a>
+	</p>
+<?php
+include('../f.php');
+?>
